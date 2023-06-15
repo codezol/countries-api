@@ -1,0 +1,32 @@
+.filter {
+    width: 20%;
+    font-size: 0.85rem;
+    
+}
+.filters__container{
+    background-color: var(--header-background);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-height: 3rem;
+}
+.arrow {
+    cursor: pointer;
+}
+.filter ul {
+    list-style: none;
+    padding: 0 2rem;
+    background-color: var(--header-background);
+    margin-top: 0.4rem;
+    position: fixed;
+    width: 18%;
+}
+.filter ul li {
+    padding: 0.4rem 0;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}

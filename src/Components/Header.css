@@ -1,0 +1,23 @@
+header {
+    background-color: var(--header-background) ;
+    height: 3.8rem;
+    font-size: 1.25rem;
+    padding: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px 0px hsl(207, 26%, 23%);
+}
+.dark-light-color{
+    font-size: 0.85rem;
+    display: flex;
+    align-content: center;
+    width: 6rem;
+}
+.dark-light-color span {
+    margin: auto;
+}
+.moon {
+    cursor: pointer;
+    width: 1.2rem !important;
+}

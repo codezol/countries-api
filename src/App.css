@@ -1,38 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Mukta:wght@200;300;400&family=Nunito+Sans:wght@300;600;800&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;;
+}
+ 
+
+:root {
+  --background-color : hsl(207, 26%, 17%);
+  --primary: hsl(0, 0%, 100%);
+  --header-background : hsl(207, 26%, 23%);
+  --text-color : hsl(205, 7.7%, 69.4%);
+}
+.light-theme {
+  --background-color: hsl(0, 0%, 98%);
+  --primary : hsl(200, 15%, 8%);
+  --header-background : #fff;
+  --text-color: #000;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: var(--background-color);
+  color: var(--primary);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-height: fit-content;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media  screen and (max-width:900px) {
+  main .cards-container{
+    grid-template-columns: repeat(3,1fr);
   }
-  to {
-    transform: rotate(360deg);
+  main .container__header {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 6rem;
+  }
+  main .container__header .search{
+    width: 90%;
+  }
+  main .container__header .filter {
+    width: 50%;
+    height: 2.2rem;
+    min-width: fit-content;
+  }
+  main .container__header .filter ul {
+      width: 45%;
+  }
+  .country-card {
+    width: 85%;
+    margin-inline: auto;
+  }
+  .details_container , .detail div{
+    flex-direction: column;
+  }
+  .country__information{
+    overflow: scroll;
+  }
+  
+}
+@media  screen and (max-width:700px) {
+  main .cards-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media  screen and (max-width:600px) {
+  main .cards-container{
+    grid-template-columns: 1fr;
   }
 }
